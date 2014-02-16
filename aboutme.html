@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>About Me</title>
+ </head>
+ <body>
+   <h1>About Me</h1>
+
+   <ul>
+     <li>Nickname: <span id="nickname"></span>
+     <li>Favorites:  <span id="favorites"></span>
+     <li>Hometown: <span id="hometown"></span>
+    </ul>
+
+
+    <script type="text/javascript">
+
+    	var kev = document.getElementsByTagName('body')[0];
+    	kev.style.fontFamily = 'Arial, sans-serif';
+
+    	var nick = document.getElementById("nickname");
+    	nick.innerHTML = "Kev";
+    	var fav = document.getElementById("favorites");
+    	fav.innerHTML = "Blackjack, Poker, Roulette";
+    	var home = document.getElementById("hometown");
+    	home.innerHTML = "Toronto";
+
+    	var listItems = document.getElementsByTagName('li');
+				for (var i =0; i < listItems.length; i++) {
+  				listItems[i].className = "listitem";
+				}
+
+			col = document.getElementsByClassName('listitem');
+				for (var i =0; i < col.length; i++) {
+					col[i].style.color = "red";
+				}
+
+			var newImg = document.createElement('img');
+			newImg.src = 'http://www.freshspace.co//images/fresh_space.png';
+			kev.appendChild(newImg);
+
+
+    </script>
+
+  </body>
+</html>

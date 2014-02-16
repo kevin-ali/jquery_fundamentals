@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>Book List</title>
+ </head>
+ <body>
+   <h1>My Book List</h1>
+
+
+
+   <script type="text/javascript">
+
+   	function book(title, author, alreadyRead) {
+			this.title = title;
+			this.author = author;
+			this.alreadyRead = alreadyRead;
+		}
+
+		var book1 = new book("Heart of Darkness", "Joseph Conrad", true);
+		var book2 = new book("Moby Dick", "Hernan Mellville", true);
+		var book3 = new book("Great Expectations", "Charles Dickens", true);
+		var book4 = new book("David Copperfield", "Charles Dickens", false);
+
+		var readingList = [book1, book2, book3, book4];
+
+		var kev = document.getElementsByTagName('body')[0];
+
+
+		for (var i =0; i < readingList.length; i++) {
+
+			var newParagraph = document.createElement('p');
+			var paragraphText = document.createTextNode(readingList[i].title + " by " + readingList[i].author);
+			newParagraph.appendChild(paragraphText);
+			kev.appendChild(newParagraph);
+
+		}
+
+   </script>
+
+
+
+
+ </body>
+</html>
